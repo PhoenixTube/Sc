@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>chart created with amCharts | amCharts</title>
+		<meta name="description" content="chart created using amCharts live editor" />
+		
+		<!-- amCharts javascript sources -->
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/amcharts.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/serial.js"></script>
+		<script type="text/javascript" src="https://www.amcharts.com/lib/3/themes/dark.js"></script>
+		
+
+		<!-- amCharts javascript code -->
+		<script type="text/javascript">
+			AmCharts.makeChart("chartdiv",
+				{
+					"type": "serial",
+					"categoryField": "category",
+					"depth3D": 20,
+					"startDuration": 1,
+					"theme": "dark",
+					"categoryAxis": {
+						"gridPosition": "start"
+					},
+					"trendLines": [],
+					"graphs": [
+						{
+							"balloonText": "[[title]] of [[category]]:[[value]]",
+							"fillAlphas": 1,
+							"id": "AmGraph-1",
+							"title": "",
+							"type": "column",
+							"valueField": "Materials"
+						}
+					],
+					"guides": [],
+					"valueAxes": [
+						{
+							"id": "ValueAxis-1",
+							"stackType": "regular",
+							"title": "Percentage of Earth's Crust"
+						}
+					],
+					"allLabels": [],
+					"balloon": {},
+					"legend": {
+						"enabled": true,
+						"accessibleLabel": "Composition of Earths Crust",
+						"useGraphSettings": true
+					},
+					"titles": [
+						{
+							"id": "Title-1",
+							"size": 15,
+							"text": "Compositions of Earths Crust"
+						}
+					],
+					"dataProvider": [
+						{
+							"category": "Oxygen",
+							"Materials": "47.5"
+						},
+						{
+							"category": "Silicon",
+							"Materials": "28.5"
+						},
+						{
+							"category": "Aluminium",
+							"Materials": "8"
+						},
+						{
+							"category": "Iron",
+							"Materials": "5"
+						},
+						{
+							"category": "Calcium",
+							"Materials": "3.5"
+						},
+						{
+							"category": "Sodium",
+							"Materials": "2.9"
+						},
+						{
+							"category": "Potassium",
+							"Materials": "2.7"
+						},
+						{
+							"category": "Magnesium",
+							"Materials": "2"
+						},
+						{
+							"category": "All Others",
+							"Materials": "1.5"
+						}
+					]
+				}
+			);
+		</script>
+	</head>
+	<body>
+		<div id="chartdiv" style="width: 100%; height: 400px; background-color: #282828;" ></div>
+	</body>
+</html>
